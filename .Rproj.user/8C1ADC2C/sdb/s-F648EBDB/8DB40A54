@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1418983331581.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8DB40A54",
+    "lastKnownWriteTime" : 30962681237012597,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "dataMatrixO",
+        "contentUrl" : "content?title=dataMatrixO&file=67e16b5995f44eb8a7897a41f417e53b.htm",
+        "displayedObservations" : 40,
+        "displayedVariables" : 10,
+        "totalObservations" : 40,
+        "variables" : 10
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

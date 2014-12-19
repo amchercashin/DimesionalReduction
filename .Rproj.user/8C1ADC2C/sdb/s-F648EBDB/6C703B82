@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1418975749241.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6C703B82",
+    "lastKnownWriteTime" : 30962681229869057,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "dataMatrix",
+        "contentUrl" : "content?title=dataMatrix&file=82fab83ecca74f7ebd2396a7ab0b3d5e.htm",
+        "displayedObservations" : 40,
+        "displayedVariables" : 10,
+        "totalObservations" : 40,
+        "variables" : 10
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

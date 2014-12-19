@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1418985068054.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "517FECB9",
+    "lastKnownWriteTime" : 30962681237012597,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "scale1",
+        "contentUrl" : "content?title=scale1&file=fa44c5e883f54d6bb5ec6a0230606000.htm",
+        "displayedObservations" : 40,
+        "displayedVariables" : 10,
+        "totalObservations" : 40,
+        "variables" : 10
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

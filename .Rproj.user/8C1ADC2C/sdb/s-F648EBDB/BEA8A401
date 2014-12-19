@@ -1,0 +1,17 @@
+{
+    "contents" : "set.seed(12345)\n\npar(mar = rep(02, 4))\ndataMatrix <-matrix(rnorm(400), nrow = 40)\n\n#Look at data, it is random\nimage(1:10, 1:40, t(dataMatrix)[, nrow(dataMatrix):1])\nheatmap(dataMatrix)\n\n#Flip a coin to make some pattern\nset.seed(678910)\nfor (i in 1:40) {\n        coinFlip <- rbinom(1, size = 1, prob = 0.5)\n        if (coinFlip) {\n                dataMatrix[i,] <- dataMatrix[i,] + rep(c(0,3), each = 5)\n              \n        }\n}\n\n#Look at data again\nimage(1:10, 1:40, t(dataMatrix)[, nrow(dataMatrix):1])\nheatmap(dataMatrix)\n\n#Reoder original data according computed clusterized order of distances between \"points\"(rows) \nhh <- hclust(dist(dataMatrix))\ndataMatrixOrdered <- dataMatrix[hh$order,]\n#Plot data\npar(mfrow = c(1,3))\nimage(t(dataMatrixOrdered)[,nrow(dataMatrixOrdered):10])\nplot(rowMeans(dataMatrixOrdered), 40:1, xlab=\"Row mean\", ylab=\"Row\", pch=19)\nplot(colMeans(dataMatrixOrdered), xlab=\"Column\", ylab=\"Column mean\", pch=19)\n\n#So to SVD, show u and v components - similar to the previous picture\nsvd1 <- svd(scale(dataMatrixOrdered))\npar(mfrow = c(1,3))\nimage(t(dataMatrixOrdered)[,nrow(dataMatrixOrdered):10])\nplot(svd1$u[,1], 40:1, xlab=\"Row\", ylab=\"First left singular vector\", pch=19)\nplot(svd1$v[,1], xlab=\"Row\", ylab=\"First right singular vector\", pch=19)\n#d component that explain variation \npar(mfrow=c(1,2))\nplot(svd1$d, xlab=\"Column\", ylab=\"Singular value\", pch=19)\nplot(svd1$d^2 / sum(svd1$d^2), xlab=\"Column\", ylab=\"Prop. of variance explained\", pch=19)\n\n\n",
+    "created" : 1418974596906.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "599775966",
+    "id" : "BEA8A401",
+    "lastKnownWriteTime" : 1418986687,
+    "path" : "~/DataScience/DimesionalReduction/SVD.R",
+    "project_path" : "SVD.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
